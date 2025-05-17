@@ -1,3 +1,5 @@
+import Button from "../components/Button.jsx";
+import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
 import { words } from "../constants/index.js";
 
 const Hero = () => {
@@ -7,7 +9,7 @@ const Hero = () => {
         <img src="/images/bg.png" alt="background" />
       </div>
 
-      <div className="hero-layot">
+      <div className="hero-layout">
         <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
           <div className="flex flex-col gap-7">
             <div className="hero-text">
@@ -35,8 +37,21 @@ const Hero = () => {
               <h1>em projetos reais</h1>
               <h1>que entregam resultados</h1>
             </div>
+            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+              Olá! Me chamo Pierre, sou desenvolvedor e apaixonado por código
+            </p>
+            <Button
+              className="md:w-80 md:h-16 w-60 h-12"
+              id="button"
+              text="Conheça mais"
+            />
           </div>
         </header>
+        <figure>
+          <div className="hero-3d-layout">
+            <HeroExperience />
+          </div>
+        </figure>
       </div>
     </section>
   );
